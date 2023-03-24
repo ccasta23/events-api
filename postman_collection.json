@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "a1ff5b74-18b1-429c-8ab8-bedcec579934",
+		"name": "Events-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|pcdLzmNwTwYfMIsB2YgbvMH6RtCNYWW7yvXgQd0w",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/events?page=3",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"events"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|pcdLzmNwTwYfMIsB2YgbvMH6RtCNYWW7yvXgQd0w",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"event_name\": \"De cero a API: Construyendo una API RESTFul con Laravel 3\",\n    \"event_date\": \"2023/03/25 10:00\",\n    \"event_max_capacity\" : 500,\n    \"event_speaker_name\" : \"Carlos Andres Castañeda Osorio\",\n    \"event_meetup_url\" : \"https://www.meetup.com/es/manizalestechtalks/events/292151177\",\n    \"event_is_virtual\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/events",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|pcdLzmNwTwYfMIsB2YgbvMH6RtCNYWW7yvXgQd0w",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/events/300",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"events",
+						"300"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|pcdLzmNwTwYfMIsB2YgbvMH6RtCNYWW7yvXgQd0w",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"event_name\": \"De cero a API: Construyendo una API RESTFul con Laravel 4\",\n    \"event_date\": \"2023/03/26 10:00\",\n    \"event_max_capacity\" : 400,\n    \"event_speaker_name\" : \"Carlos Andres Castañeda Osorio\",\n    \"event_meetup_url\" : \"https://www.meetup.com/es/manizalestechtalks/events/292151178\",\n    \"event_is_virtual\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/events/206",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"events",
+						"206"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|pcdLzmNwTwYfMIsB2YgbvMH6RtCNYWW7yvXgQd0w",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/events/206",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"events",
+						"206"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"app1\",\n    \"email\": \"madelynn24@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
